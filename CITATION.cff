@@ -1,0 +1,26 @@
+cff-version: 1.2.0
+message: "Please cite the manuscript; this repository supplies source, data and verification artifacts."
+type: software
+title: "A rational quantum channel beyond finite tracial baths"
+version: 1.0.0
+license:
+  - CC-BY-4.0
+  - MIT
+authors:
+  - family-names: Mghirbi
+    given-names: Nidhal
+  - family-names: Douglas
+    given-names: Seth
+url: "https://github.com/Apsiape/rational-channel-beyond-finite-baths"
+repository-code: "https://github.com/Apsiape/rational-channel-beyond-finite-baths"
+preferred-citation:
+  type: generic
+  title: "A rational quantum channel beyond finite tracial baths"
+  authors:
+    - family-names: Mghirbi
+      given-names: Nidhal
+    - family-names: Douglas
+      given-names: Seth
+  year: 2026
+  version: 1.0.0
+  notes: "Preprint with accompanying data and verification artifacts; see RIGHTS.md for license scope."

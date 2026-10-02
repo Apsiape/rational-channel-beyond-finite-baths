@@ -1,0 +1,6 @@
+BUILD: complete finite presentation and rational channel regenerated
+COUNTS: 43 generators; 4417 relators; 11230 labels; 16428 triangles; dimension 44086
+PRESENTATION SHA256: c17a57463b1d3c327f13dab537b2a61e9cba300625d2009a90202022ac65adfe
+CHANNEL JSON SHA256: 38150decf3d203e3eabbc5dee8d8a3f2d6390aa960c50f90fe4c87b804729b68
+SOURCE OF COEFFICIENTS: explicit finite Laurent-matrix arithmetic, not a MIP* compiler
+GAP: strictly positive by the analytical argument; numerical lower bound remains null

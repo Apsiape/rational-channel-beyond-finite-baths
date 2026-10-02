@@ -1,0 +1,50 @@
+{
+  "title": "A rational quantum channel beyond finite tracial baths",
+  "upload_type": "publication",
+  "publication_type": "preprint",
+  "version": "1.0.0",
+  "creators": [
+    {
+      "name": "Mghirbi, Nidhal"
+    },
+    {
+      "name": "Douglas, Seth"
+    }
+  ],
+  "description": "<p>A quantum channel on a finite system always has a finite realization with a pure environment. With a maximally mixed environment this can fail even approximately: since MIP* = RE, some factorizable channels lie outside the closure of the finite matrix-tracial factorizations (Haagerup and Musat). This paper constructs an explicit one: a unital channel on fifteen qubits with 11,230 Kraus operators, whose entries are integers divided by five, that factorizes exactly through a type II_1 factor but cannot be approximated with any finite maximally mixed environment.</p><p>The construction starts from an explicit finite presentation, with 43 generators and 4,417 relators, of a group that maps into the amalgamated double of a Kun–Thom pair over the field with five elements. In it, Thom's witness commutator becomes a word of length six, which every tracial matrix-ultraproduct representation kills by the centralizer-rigidity theorems of Alekseev, Liu and Thom and of Thom (recent preprints). Rational two-level blocks enforce the relations, and the Choi matrix gives the word a trace the identity cannot have. Against finite tracial channels whose Choi support lies inside the target's, the channel is at normalized Choi distance more than 1/316 and half-diamond distance at least 1/2. Its positive distance to the closure forces memory linear in the number of uses for causal repeated use at small error and bounded exchange. For a larger, fully referenced version of the channel, a uniform relator tolerance, which exists but is not evaluated, would give explicit lower bounds on the distance and on the memory constant.</p><p>This archive includes the paper, whose appendices give the full presentation and all proofs, the exact channel data, programs that rebuild every channel from the presentation, and independent finite checks.</p>",
+  "keywords": [
+    "quantum channels",
+    "factorizable channels",
+    "Connes embedding",
+    "hyperlinear groups",
+    "property (T)",
+    "tracial ultraproducts",
+    "quantum memory"
+  ],
+  "access_right": "open",
+  "license": "cc-by-4.0",
+  "language": "eng",
+  "notes": "The authors' archive content is licensed CC BY 4.0. Software and machine-readable data are additionally available under MIT at the recipient's option; see RIGHTS.md. This is a preprint, not a claim of journal peer review.",
+  "related_identifiers": [
+    {
+      "identifier": "https://doi.org/10.5281/zenodo.23070870",
+      "relation": "cites"
+    },
+    {
+      "identifier": "https://doi.org/10.5281/zenodo.23070871",
+      "relation": "cites"
+    },
+    {
+      "identifier": "https://arxiv.org/abs/2609.27795",
+      "relation": "cites"
+    },
+    {
+      "identifier": "https://arxiv.org/abs/2609.37761",
+      "relation": "cites"
+    },
+    {
+      "identifier": "https://arxiv.org/abs/2608.06222",
+      "relation": "cites"
+    }
+  ]
+}

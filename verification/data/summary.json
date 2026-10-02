@@ -1,0 +1,44 @@
+{
+  "right_inverse_pair_deletions": 408,
+  "reversed_generator_inverse_deletions": 30,
+  "total_deleted": 438,
+  "retained_triangles": 15990,
+  "certificate_count": 438,
+  "all_labels_covered": true,
+  "variants": {
+    "one_anchor": {
+      "dimension": 31981,
+      "rank": 11230,
+      "sparse_entries": 63961,
+      "identity_padding_count": 0,
+      "identity_weight_numerator": 144322,
+      "j_weight_numerator": 16,
+      "restricted_choi_gap_squared": "2309152/639240225625",
+      "global_numerical_gap": null,
+      "sha256_uncompressed": "3e56e422def2967be9561fdc4d4b97bf0b9bf534cdc0640bc0a525bf6c0c00d4"
+    },
+    "two_anchor": {
+      "dimension": 31982,
+      "rank": 11230,
+      "sparse_entries": 63962,
+      "identity_padding_count": 0,
+      "identity_weight_numerator": 144322,
+      "j_weight_numerator": 41,
+      "restricted_choi_gap_squared": "2958601/319640101250",
+      "global_numerical_gap": null,
+      "sha256_uncompressed": "c11f651e46b8dee8403b9b44a88b74a2670a0c1593e8d38756c22605b91cfbbc"
+    },
+    "fifteen_qubits": {
+      "dimension": 32768,
+      "rank": 11230,
+      "sparse_entries": 64748,
+      "identity_padding_count": 786,
+      "identity_weight_numerator": 163972,
+      "j_weight_numerator": 41,
+      "restricted_choi_gap_squared": "1680713/167772160000",
+      "global_numerical_gap": null,
+      "sha256_uncompressed": "1236ae6e7d587c738baac7c0e5815c90ece46ff8c9392fd0012614aae6e1aa1b"
+    }
+  },
+  "scope": "Exact finite data and free-group implications only. Global nonmembership inherits baseline analytical inputs; global numerical gap remains unevaluated."
+}

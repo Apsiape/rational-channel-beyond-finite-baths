@@ -1,0 +1,23 @@
+{
+  "release": "quantitative-progress-2026-10-01",
+  "newly_generated_deliverable": true,
+  "global_numerical_gap_established": false,
+  "general_rigidity_theorems_formalized": false,
+  "original_group_presentation_changed": false,
+  "new_channel_dimensions": [
+    32858,
+    32857
+  ],
+  "restricted_support_bounds": {
+    "32858": "3/1000",
+    "32857": "1/533"
+  },
+  "conditional_original_global_bound": "e_0^2 / 65188028416; no evaluated e_0 is supplied",
+  "baseline_nonmembership_status": "CANDIDATE; external analytical inputs retained",
+  "new_analytic_lemmas": "written proofs supplied; not independently reviewed or formally verified",
+  "finite_verification": {
+    "passed": 17,
+    "total": 17
+  },
+  "not_a_completed_final_global_separation_paper": true
+}

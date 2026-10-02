@@ -1,0 +1,7 @@
+PRESENTATION: 43 generators; 4417 distinct freely reduced relators
+LENGTHS: total 41953; maximum 19
+QUOTIENT: every relator is exactly identity in the Laurent-matrix amalgam
+KAZHDAN INPUT: three finite root subgroups; squared orthogonality 1/5 < 1/4
+COMPRESSION: all six positive action roots preserve the polynomial coefficient cone
+WITNESS: j=[a2,T12_1 T12_0^-1]; reduced sides (1,0,1); middle coefficient -x2/x1
+SCOPE: external property-(T) and ultraproduct centralizer arguments are not code-verified
