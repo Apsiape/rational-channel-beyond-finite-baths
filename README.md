@@ -2,6 +2,8 @@
 
 Nidhal Mghirbi and Seth Douglas — October 2026.
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23093838.svg)](https://doi.org/10.5281/zenodo.23093838)
+
 [Read the paper](paper.pdf) · [TeX source](paper.tex) ·
 [Verification scope](verification/README.md)
 
@@ -61,5 +63,9 @@ The software and machine-readable data are additionally available under
 the **MIT License**, at your option; see [RIGHTS.md](RIGHTS.md) for the scope.
 
 Please cite Nidhal Mghirbi and Seth Douglas, *A rational quantum channel beyond finite
-tracial baths* (2026), version 1.0. [CITATION.cff](CITATION.cff) provides
-machine-readable citation metadata. A DOI will be added when the first version is archived.
+tracial baths* (2026), version 1.0,
+[doi:10.5281/zenodo.23093838](https://doi.org/10.5281/zenodo.23093838) (all versions). [CITATION.cff](CITATION.cff) provides
+machine-readable citation metadata.
+
+The DOI above is the all-versions DOI, which identifies the evolving work. The v1.0.0 archive is
+[doi:10.5281/zenodo.23093839](https://doi.org/10.5281/zenodo.23093839).

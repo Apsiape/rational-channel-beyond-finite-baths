@@ -3,6 +3,7 @@ message: "Please cite the manuscript; this repository supplies source, data and 
 type: software
 title: "A rational quantum channel beyond finite tracial baths"
 version: 1.0.0
+doi: 10.5281/zenodo.23093839
 license:
   - CC-BY-4.0
   - MIT
@@ -23,4 +24,6 @@ preferred-citation:
       given-names: Seth
   year: 2026
   version: 1.0.0
+  doi: 10.5281/zenodo.23093839
   notes: "Preprint with accompanying data and verification artifacts; see RIGHTS.md for license scope."
+  url: "https://doi.org/10.5281/zenodo.23093839"
