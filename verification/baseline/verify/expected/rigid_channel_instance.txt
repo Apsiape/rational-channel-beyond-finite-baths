@@ -1,7 +1,0 @@
-INDEPENDENT: 4417 relators, 11230 distinct labels and 16428 triangles checked exactly
-ENCODING: every defining word and generator inverse closes using retained triangles
-CHANNEL: dimension 44086; Choi rank 11230; 76942 sparse rational Kraus entries
-COEFFICIENTS: denominator 5; numerators 5, 3, 4, -3
-CPTP: sum K_g* K_g = I; UNITAL: sum K_g K_g* = I, by integer identities
-CHOI: disjoint supports; positive weights; exact trace one; singleton rank-11230 flat probe
-SCOPE: nonmembership uses QI-218 and the external centralizer theorem; no numeric gap claimed

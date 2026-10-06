@@ -1,71 +1,82 @@
-# A rational quantum channel beyond finite tracial baths
+# Factorizable Rational Quantum Channels at an Explicit Distance from Finite Tracial Baths: source, code and data
 
-Nidhal Mghirbi and Seth Douglas — October 2026.
+Nidhal Mghirbi and Seth Douglas, October 2026.
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23093838.svg)](https://doi.org/10.5281/zenodo.23093838)
+This repository holds the paper's source, its data files and its verification scripts. It is
+version 2.0.0 of the Zenodo record doi:10.5281/zenodo.23093838; that concept DOI always resolves
+to the latest version. The earlier report, version 1.0
+(doi:10.5281/zenodo.23093839), constructed explicit rational channels that are factorizable but
+not limits of noisy operations (channels implementable with a finite maximally mixed
+environment), and proved that their distance from that closure is positive. The paper makes such
+distances explicit.
 
-[Read the paper](paper.pdf) · [TeX source](paper.tex) ·
-[Verification scope](verification/README.md)
+- **A twelve-qubit channel.** Using the dimension-uniform reflection estimate of Wang and Zhi
+  (arXiv:2610.01536), a unital channel on 4096 dimensions with Kraus entries in
+  {0, 1, ±3/5, 4/5} and Choi rank 949 has normalized Choi and diamond distance at least
+  2^-(2J+50) from the closure, with J = 2^(2^1122000).
+- **A compiler theorem.** Any finite relation system with relators of length at most six and a
+  uniform rigidity tolerance compiles to a rational channel with an explicit gap and an explicit
+  two-outcome witness on the Choi state.
+- **The earlier channels.** A new spectral certificate for their characteristic-five
+  presentation gives each of the three reduced channels of version 1.0, including the
+  fifteen-qubit one, the gap 2^-(2J+41), through a support-leakage theorem that needs no singletons
+  for the generators, and the fully referenced channel the gaps 2^-(2J+36) (Choi) and 2^-(2J+21)
+  (diamond), through version 1.0's Theorem 6 (restated with proof as Lemma 7.3).
 
-A quantum channel on a finite system always has a finite realization with a pure
-environment. With a maximally mixed environment this can fail even approximately: since
-MIP* = RE, some factorizable channels lie outside the closure of the finite matrix-tracial
-factorizations (Haagerup and Musat). This paper constructs an explicit one: a unital channel
-on fifteen qubits with 11,230 Kraus operators, whose entries are integers divided by five,
-that factorizes exactly through a type II<sub>1</sub> factor but cannot be approximated with
-any finite maximally mixed environment.
+The constants are astronomically small; they come from the tolerance of Wang and Zhi's reflection
+estimate. Their paper, and the preprints of Thom and of Alekseev, Liu and Thom that its proofs
+use, are recent and not yet refereed; Section 1.4 of the paper lists which results depend on
+them. Version 1.0's source remains in this repository's history and in its Zenodo record.
 
-The construction starts from an explicit finite presentation, with 43 generators and 4,417
-relators, of a group that maps into the amalgamated double of a Kun–Thom pair over the field
-with five elements. In it, Thom's witness commutator becomes a word of length six, which every
-tracial matrix-ultraproduct representation kills by the centralizer-rigidity theorems of
-Alekseev, Liu and Thom and of Thom (recent preprints). Rational two-level blocks enforce the
-relations, and the Choi matrix gives the word a trace the identity cannot have.
-
-The paper also proves two quantitative statements:
-
-- Against finite tracial channels whose Choi support lies inside the target's, the
-  fifteen-qubit channel is at normalized Choi distance more than 1/316 and half-diamond
-  distance at least 1/2.
-- For the original channel, which keeps a reference position for every label, the distance
-  Δ_J to the closure is positive, and serving n uses in the causal model of the companion
-  papers needs memory at least nΔ_J²/(24 ln 2) − 2 at error at most min(1/16, Δ_J/2) and with
-  at most (n/2)·log₂ 11,230 exchanged qubits. A uniform relator tolerance, which exists but is
-  not evaluated, would give an explicit lower bound on Δ_J.
-
-The appendices give the full presentation, the word and channel algorithms, all proofs and the
-data format. This repository contains the exact data, programs that rebuild every channel from
-the presentation, and independent finite checks of the scope stated in
-[verification/README.md](verification/README.md).
-
-## Reproduce
-
-The finite checks need Python 3.10 or later and its standard library only. From
-`verification/`:
+## Build
 
 ```sh
-python verify_manifest.py     # byte integrity of the retained files
-python verify_release.py      # all finite-data checks, including the two baseline suites
-python rebuild_all.py --out rebuilt
+pdflatex rational_quantum_channel.tex   # run three times
 ```
 
-The second command runs 25 top-level checks, two of which run nested suites, including
-deliberate-corruption controls in ordinary and optimized Python; it takes about a minute.
-The third regenerates the original presentation and channel and every reduced channel, then
-checks them independently. See [verification/README.md](verification/README.md).
+## Verification
 
-`python build.py` rebuilds the paper, with its appendices, with pdflatex.
+```sh
+python verify_all.py
+```
 
-## License and citation
+The verification uses the standard library only (`build_f5_root_certificate.py`, which built `f5_root_sos.json`, needs sympy and is not run); about ten seconds; tested with Python 3.10, 3.13 and 3.14. It ends with `OK ALL` and writes
+`verification_report.json`. Section 8 of the paper lists what each step checks:
 
-The manuscript and repository content are available under **CC BY 4.0**.
-The software and machine-readable data are additionally available under
-the **MIT License**, at your option; see [RIGHTS.md](RIGHTS.md) for the scope.
+- `relation_compiler.py` rebuilds Wang and Zhi's relation system (with the ordered symbols
+  p_ab and p_ba identified) and its triangle table in exact arithmetic;
+- `build_max_anchor_wz_channel.py` rebuilds the 12-qubit payload, which must equal
+  `wz_max_anchor_channel_12q.json.gz` in decompressed content;
+- `verify_payload_table.py` and `verify_channel_payload.py` check the payload against the
+  compiler and independently (normalization, supports, anchors, block patterns);
+- `verify_compiler_constants.py`, `verify_two_test_certificate.py` and
+  `verify_original15_leakage_constants.py` recompute the constants of Sections 3–7 from
+  a = 3/5 and b = 4/5;
+- `verify_earlier_channels.py` checks the hypotheses of Theorem 7.1 on version 1.0's files in `earlier/`, including the Kraus pattern and normalization of all three reduced channels;
+- `verify_nt_certificate.py`, `verify_rigidity_constants.py` and `verify_f5_old15_rigidity.py`
+  check the spectral certificates and the exponent comparison of Lemma C.1.
 
-Please cite Nidhal Mghirbi and Seth Douglas, *A rational quantum channel beyond finite
-tracial baths* (2026), version 1.0,
-[doi:10.5281/zenodo.23093838](https://doi.org/10.5281/zenodo.23093838) (all versions). [CITATION.cff](CITATION.cff) provides
-machine-readable citation metadata.
+The scripts check finite identities only. The analytic steps are proved in the paper, and Wang
+and Zhi's theorems are used as stated in its Appendix C.
 
-The DOI above is the all-versions DOI, which identifies the evolving work. The v1.0.0 archive is
-[doi:10.5281/zenodo.23093839](https://doi.org/10.5281/zenodo.23093839).
+## Files from version 1.0
+
+`earlier/` contains `presentation.json`, the three reduced channels (`fifteen_qubits_channel.json.gz`,
+`two_anchor_channel.json.gz`, `one_anchor_channel.json.gz`) and `deletion_certificates.json` as
+released in version 1.0, and `original_channel.json.gz`, the
+fully referenced channel regenerated by version 1.0's `rebuild_all.py`. The SHA-256 of its
+uncompressed bytes equals the baseline hash recorded in the released files, which
+`verify_earlier_channels.py` checks.
+
+`SHA256SUMS.txt` lists the SHA-256 of the data files.
+
+`earlier/model/` holds two checkers adapted from the earlier report's package (MIT licence):
+`check_model.py` verifies that every relator holds in the Laurent-matrix amalgam and that the witness
+is a reduced word of length three, and `check_labels.py` evaluates all 11230 labels and 16428
+triangles of the fully referenced channel independently and checks that the labels are distinct.
+`verify_all.py` runs both.
+
+## Licensing
+
+Paper and documentation: CC BY 4.0 (`LICENSE-CC-BY-4.0.txt`). Scripts and data: additionally MIT
+(`LICENSE-MIT.txt`). See `RIGHTS.md`.

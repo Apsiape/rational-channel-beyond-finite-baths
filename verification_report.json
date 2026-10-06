@@ -1,0 +1,105 @@
+{
+  "ok": true,
+  "python": "3.13.12 (tags/v3.13.12:1cbe481, Feb  3 2026, 18:22:25) [MSC v.1944 64 bit (AMD64)]",
+  "sha256": {
+    "earlier/deletion_certificates.json": "6ab4705b8420ce5c65c3093dc36d05fb78820e31e82ed6be320ddb61d8f42bf1",
+    "earlier/fifteen_qubits_channel.json.gz": "07422d588599c79badf7808afe85515d85c5d6b0a5381e8bcff2b4b07a47a372",
+    "earlier/one_anchor_channel.json.gz": "e2d093cfc8c71ac917de974e782b9be60821847ef32002f21200a8c052881111",
+    "earlier/original_channel.json.gz": "153f391fdf48482bd2303465d913c901cbefe52ba1055f702b3e39afa9c1bda2",
+    "earlier/presentation.json": "c17a57463b1d3c327f13dab537b2a61e9cba300625d2009a90202022ac65adfe",
+    "earlier/two_anchor_channel.json.gz": "46533d870600fe1124a910253b35dcf0fc46cf0b6f2624ae0a7653b853ff9d60",
+    "f5_root_sos.json": "bf3f4f5699ce0781230903c82f5b2b31ae5377d8319b96b4d338b7008d5bb417",
+    "nt_sos_certificate.json.gz": "e78234fd9e2a9e1bf820135e945254377b7d7a88227e62e1318b560746fefbc7",
+    "nt_word_reductions.json.gz": "ae1f46499816e90ec6952513f1ef59b9eeec55e7f39113812066a18681c0d9b1",
+    "st3_opposite_reductions.json": "99f3255bf44c9edd1bdd0116eb956f0ef5ce3076f8d8bd143589c4c8b0fe6a7b",
+    "wz_max_anchor_channel_12q.json.gz": "99168dce3f63f0eedf5f1f61370b0e67fbd90142c4691e36e3fad3e5b0e6ba29"
+  },
+  "steps": [
+    {
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "{\n  \"certificate\": {\n    \"analytic_dependency\": \"Wang-Zhi arXiv:2610.01536v1 Theorem 5.2\",\n    \"certificate_sha256_without_hash_field\": \"2db47cbca1ebb4a4ea4aa708c0a8a8ed73a2bb1bafd2f7ac1d01ef9576b3a809\",\n    \"compiled_relators\": 917,\n    \"gap_formulas\": {\n      \"WZ_J\": \"2^(2^1122000)\",\n      \"WZ_delta\": \"2^(-J)\",\n      \"gap_12q_choi_and_diamond\": \"2^(-(2J+50))\",\n      \"relator_tolerance_rho0\": \"delta/2^10 = 2^(-(J+10))\",\n      \"signal_closeness\": \"< 2^-17\"\n    },\n    \"independent_root_involution_equations\": 72,\n    \"independent_unitary_generators\": 81,\n    \"labels\": 949,\n    \"max_relator_length\": 6,\n    \"natural_dimension\": 4681,\n    \"signal_labels\": {\n      \"P\": 87,\n      \"Q\": 88\n    },\n    \"signal_normal_form_sides\": {\n      \"P\": \"G0\",\n      \"Q\": \"G1\"\n    },\n    \"source_relation_counts\": {\n      \"RH_comm\": 585,\n      \"RH_cross\": 81,\n      \"RK\": 15,\n      \"Radd\": 18,\n      \"Rcomp\": 126,\n      \"Rprod\": 18\n    },\n    \"triangles\": 1866,\n    \"wz_balanced_equations\": 843\n  }\n}\n",
+      "step": "relation_compiler.py"
+    },
+    {
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "OK maximal-anchor channel\ndimension 4096 anchors 364 triangles 1866 labels/rank 949 nonzero 7828\nP,Q positions 1 2\nflat_probe_rank 364\nsha256 de688834f02b16d0ff5221f03b2e7b7fa9955a0da9ede296cf6cf8df9fa27500\n<scratch>\\wz_max_anchor_channel_12q.json.gz\n",
+      "step": "build_max_anchor_wz_channel.py"
+    },
+    {
+      "returncode": 0,
+      "step": "rebuilt payload equals shipped payload"
+    },
+    {
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "OK payload matches the relation compiler\nrelators 917 (length <= 6), generators 81, letter labels 88, all anchored\ntriangle table identical (1866 blocks), block patterns exact, signals 87 88\n",
+      "step": "verify_payload_table.py"
+    },
+    {
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "OK independent 12-qubit channel payload\ncanonical_sha256 de688834f02b16d0ff5221f03b2e7b7fa9955a0da9ede296cf6cf8df9fa27500\ndimension=4096 anchors=364 triangles=1866 Choi_rank=949 nonzero=7828\nflat_probe_rank=364; signal positions=(1,2)\n",
+      "step": "verify_channel_payload.py"
+    },
+    {
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "OK compiler constants\n94/25, 144/25, 41/3; prefix constants 2, 17, 42, 251/3, 1378/9, 7259/27\nletter defect 7313/27 ; inverse replacement 19 ; total 10391/27 < 385\ncoherence margin > 3/(4d); g* = 2^-(2J+50)\n",
+      "step": "verify_compiler_constants.py"
+    },
+    {
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "OK finite channel witness data\nsupport effect target probability 0\ncoherence effect target probability 1/4096\nsingle-game normalized score gap >= 3g/[8(1+alpha)], alpha=4096g/2\n",
+      "step": "verify_two_test_certificate.py"
+    },
+    {
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "fifteen_qubits_channel: s_1 + s_j = 164013/25\ntwo_anchor_channel: s_1 + s_j = 144363/25\none_anchor_channel: s_1 + s_j = 144338/25\nOK earlier-channel leakage constants\nletters within 133/16 r; z-only within 203/6 r; retained 2443/18 < 136 r\ndeleted < 272 r; relators < 7480 r < 2^13 r; gap 2^-(2J+41)\nfully referenced channel: Choi > 2^-(2J+36), diamond > 2^-(2J+21)\n",
+      "step": "verify_original15_leakage_constants.py"
+    },
+    {
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "OK earlier-channel structure for Theorem 7.1\nbaseline sha256 38150decf3d203e3eabbc5dee8d8a3f2d6390aa960c50f90fe4c87b804729b68\nrelators 4417 max length 19 ; all prefix walks return to the identity, no proper identity prefix\noriginal table = prefix triangles + inverse triangles; fully referenced channel: d = 44086, one singleton per label\nretained 15990 deleted 438 = family (a) 408 + family (b) 30\nfamily (a) protected inverse orientation: (y,y',1) 315 ; only (y',y,1) 93\nsingletons of Phi_15: identity x787, witness label 85 x1; labels covered 11230\nPhi_15, Phi_2, Phi_1 (dimensions (32768, 31982, 31981) ): triangles, singletons, block pattern, padding, normalization OK\n",
+      "step": "verify_earlier_channels.py"
+    },
+    {
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "OK exact Netzer--Thom reconstruction\nbasis_size=121 sos_rows=120 denominator=10000000\ncorrection_l1=572700482439/25000000000000 ~= 0.0229080192976\neffective_Delta_gap=1180424517561/6250000000000 ~= 0.18886792281 (>1/6)\nresidual_comparisons=6722 canonical=858 max_relation_replacements=14\nC_K=37610695003407823/28800000000000000 ~= 1.30592690984; spectral_transfer=263274865023854761/14400000000000000 ~= 18.2829767378\nnt_sos_certificate.json.gz content sha256 20b4a5cc1f4ac603cd16956bec0e84c944f47b9d361a4c39337ac730eb4de111\nnt_word_reductions.json.gz content sha256 beaa1fccdaef93db089e65e3a58491480284b2f44b7dd4795db7923576f4c52c\n",
+      "step": "verify_nt_certificate.py"
+    },
+    {
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "OK exact rigidity/compiler scalar checks\nfinite-field SOS polynomial identity: exact\nNT effective gap = 1180424517561/6250000000000 > 1/6\nNT relation transfer = 263274865023854761/14400000000000000 < 19\n12q anchors=364 labels/rank=949 triangles=1866 nonzero=7828\nWZ tolerance exponent comparison: 8 M0 < J (Lemma C.1)\n",
+      "step": "verify_rigidity_constants.py"
+    },
+    {
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "OK characteristic-five rigidity scalars and certificates\nF5 root SOS: degree 11 squares 23\nC_root = 5163853243256234099731107007343755264/403 < 2^114\nSteinberg opposite reductions: 3 x 13 cells exact\ninteger residual coefficient <=247\nSteinberg relations = earlier presentation copy-zero relators; relator families and witness word match\n144 forward compression relators: targets of length 1 or 16 in positive roots, identical in both copies\n43-generator presentation tolerance delta_5 = 2^-J, J = 2^(2^1122000) (Theorem D.4)\n",
+      "step": "verify_f5_old15_rigidity.py"
+    },
+    {
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "PRESENTATION: 43 generators; 4417 distinct freely reduced relators\nLENGTHS: total 41953; maximum 19\nQUOTIENT: every relator is exactly identity in the Laurent-matrix amalgam\nKAZHDAN INPUT: three finite root subgroups; squared orthogonality 1/5 < 1/4\nCOMPRESSION: all six positive action roots preserve the polynomial coefficient cone\nWITNESS: j=[a2,T12_1 T12_0^-1]; reduced sides (1,0,1); middle coefficient -x2/x1\nSCOPE: external property-(T) and ultraproduct centralizer arguments are not code-verified\n",
+      "step": "earlier/model/check_model.py"
+    },
+    {
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "INDEPENDENT: 4417 relators, 11230 distinct labels and 16428 triangles checked exactly\nENCODING: every defining word and generator inverse closes using retained triangles\nCHANNEL: dimension 44086; Choi rank 11230; 76942 sparse rational Kraus entries\nCOEFFICIENTS: denominator 5; numerators 5, 3, 4, -3\nCPTP: sum K_g* K_g = I; UNITAL: sum K_g K_g* = I, by integer identities\nCHOI: disjoint supports; positive weights; exact trace one; singleton rank-11230 flat probe\nSCOPE: labels, triangles and channel identities only; the distance bounds are in the paper\n",
+      "step": "earlier/model/check_labels.py"
+    },
+    {
+      "returncode": 0,
+      "step": "data files match SHA256SUMS.txt"
+    }
+  ]
+}

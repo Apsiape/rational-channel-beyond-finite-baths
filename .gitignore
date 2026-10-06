@@ -1,10 +1,7 @@
-/build/
+build/
 __pycache__/
-*.pyc
 *.aux
 *.log
 *.out
-verification/reports/
-verification/rebuilt*/
-verification/baseline/verification/results.json
-verification/baseline/verification/quantitative_results.json
+*.toc
+rebuilt/

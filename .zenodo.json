@@ -1,8 +1,8 @@
 {
-  "title": "A rational quantum channel beyond finite tracial baths",
+  "title": "Factorizable Rational Quantum Channels at an Explicit Distance from Finite Tracial Baths",
   "upload_type": "publication",
   "publication_type": "preprint",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "creators": [
     {
       "name": "Mghirbi, Nidhal"
@@ -11,14 +11,16 @@
       "name": "Douglas, Seth"
     }
   ],
-  "description": "<p>A quantum channel on a finite system always has a finite realization with a pure environment. With a maximally mixed environment this can fail even approximately: since MIP* = RE, some factorizable channels lie outside the closure of the finite matrix-tracial factorizations (Haagerup and Musat). This paper constructs an explicit one: a unital channel on fifteen qubits with 11,230 Kraus operators, whose entries are integers divided by five, that factorizes exactly through a type II_1 factor but cannot be approximated with any finite maximally mixed environment.</p><p>The construction starts from an explicit finite presentation, with 43 generators and 4,417 relators, of a group that maps into the amalgamated double of a Kun–Thom pair over the field with five elements. In it, Thom's witness commutator becomes a word of length six, which every tracial matrix-ultraproduct representation kills by the centralizer-rigidity theorems of Alekseev, Liu and Thom and of Thom (recent preprints). Rational two-level blocks enforce the relations, and the Choi matrix gives the word a trace the identity cannot have. Against finite tracial channels whose Choi support lies inside the target's, the channel is at normalized Choi distance more than 1/316 and half-diamond distance at least 1/2. Its positive distance to the closure forces memory linear in the number of uses for causal repeated use at small error and bounded exchange. For a larger, fully referenced version of the channel, a uniform relator tolerance, which exists but is not evaluated, would give explicit lower bounds on the distance and on the memory constant.</p><p>This archive includes the paper, whose appendices give the full presentation and all proofs, the exact channel data, programs that rebuild every channel from the presentation, and independent finite checks.</p>",
+  "description": "<p>A quantum channel can always be implemented by a unitary interaction with an environment that starts in a pure state. With a finite, maximally mixed environment, the implementable channels are the noisy operations. A tracial von Neumann algebra as environment gives the factorizable channels, and by a theorem of Haagerup and Musat combined with MIP* = RE, some of these lie outside the closure of the noisy operations. Version 1.0 of this record wrote down explicit rational channels of this kind, with no value for their distance from the closure. This version gives explicit lower bounds.</p><p>Using Wang and Zhi's dimension-uniform reflection estimate, it constructs a factorizable unital channel on twelve qubits with Kraus entries in {0, 1, ±3/5, 4/5}, whose normalized Choi and diamond distances from the closure are at least 2^-(2J+50), with J = 2^(2^1122000). The bound comes from a compiler theorem: group relations that are rigid uniformly in the matrix dimension give a rational channel with an explicit distance bound. For the channels of version 1.0, a new spectral certificate for the root groups of their presentation gives explicit gaps: 2^-(2J+41) for the fifteen-qubit channel and its two variants and, by the bound of version 1.0, 2^-(2J+36) in Choi distance and 2^-(2J+21) in diamond distance for the fully referenced channel. The numbers are tiny because Wang and Zhi's tolerance is 2^-J. The results depend on recent preprints of Wang and Zhi, Thom, and Alekseev, Liu and Thom, which are not yet refereed.</p><p>This archive includes the paper, the channel data, the certificates, and programs that rebuild and check them; python verify_all.py ends with OK ALL.</p>",
   "keywords": [
     "quantum channels",
     "factorizable channels",
+    "noisy operations",
     "Connes embedding",
     "hyperlinear groups",
     "property (T)",
     "tracial ultraproducts",
+    "explicit bounds",
     "quantum memory"
   ],
   "access_right": "open",
@@ -31,7 +33,11 @@
       "relation": "cites"
     },
     {
-      "identifier": "https://doi.org/10.5281/zenodo.23070871",
+      "identifier": "https://doi.org/10.5281/zenodo.23111927",
+      "relation": "cites"
+    },
+    {
+      "identifier": "https://arxiv.org/abs/2610.01536",
       "relation": "cites"
     },
     {
