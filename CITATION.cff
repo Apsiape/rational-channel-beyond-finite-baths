@@ -3,7 +3,7 @@ message: "Please cite the manuscript; this repository supplies source, data and 
 type: software
 title: "Factorizable Rational Quantum Channels at an Explicit Distance from Finite Tracial Baths"
 version: 2.0.0
-doi: 10.5281/zenodo.23093838
+doi: 10.5281/zenodo.23196593
 license:
   - CC-BY-4.0
   - MIT
@@ -24,6 +24,6 @@ preferred-citation:
       given-names: Seth
   year: 2026
   version: 2.0.0
-  doi: 10.5281/zenodo.23093838
-  notes: "Preprint with accompanying data and verification artifacts; see RIGHTS.md for license scope. The DOI is the concept DOI of all versions."
-  url: "https://doi.org/10.5281/zenodo.23093838"
+  doi: 10.5281/zenodo.23196593
+  notes: "Preprint with accompanying data and verification artifacts; see RIGHTS.md for license scope. Concept DOI of all versions: 10.5281/zenodo.23093838."
+  url: "https://doi.org/10.5281/zenodo.23196593"

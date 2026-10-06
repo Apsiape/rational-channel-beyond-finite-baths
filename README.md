@@ -3,8 +3,8 @@
 Nidhal Mghirbi and Seth Douglas, October 2026.
 
 This repository holds the paper's source, its data files and its verification scripts. It is
-version 2.0.0 of the Zenodo record doi:10.5281/zenodo.23093838; that concept DOI always resolves
-to the latest version. The earlier report, version 1.0
+version 2.0.0 (doi:10.5281/zenodo.23196593) of the Zenodo record doi:10.5281/zenodo.23093838;
+that concept DOI always resolves to the latest version. The earlier report, version 1.0
 (doi:10.5281/zenodo.23093839), constructed explicit rational channels that are factorizable but
 not limits of noisy operations (channels implementable with a finite maximally mixed
 environment), and proved that their distance from that closure is positive. The paper makes such
